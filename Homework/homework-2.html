@@ -4,15 +4,28 @@
     <title>ACME Corp</title>
     <style>
       header
-        {background-color: #c4c4c4; position: fixed; top: 0; left:0; right: 0; border-radius:1px; border: 1px solid lightgrey; box-shadow: 1px 1px lightgrey;}
+        {background-color: #c4c4c4; position: fixed; top: 0; left:0; right: 0; border-radius:1px; border: 1px solid lightgrey; box-shadow: 1px 1px lightgrey;
+        margin: 0 auto;}
         ul
           {list-style-type:none; margin: 0; padding: 0;}
           li
             {display: inline; position: relative; top: 0; padding: 10;}
             img
               {position: relative; top: 5; left: 15;}
-            a
-              {border-radius: 3px; padding: 5px; background-color:mediumblue; color:white; font-family: arial; text-shadow:0px 1px grey}
+            a {
+              border-radius: 3px;
+              padding: 5px;
+              color:white;
+              font-family: arial;
+              text-shadow:0px 1px grey; position: relative;
+              top: -20;
+              left: 700;
+              font-size: 90%;
+              text-decoration: none;
+              }
+            .btn {
+              background-color: mediumblue;
+              }
       body
         {background-image: url("http://f.cl.ly/items/3G1S012t3J3l3b0h070i/background.png");}
       main
@@ -25,6 +38,7 @@
   </head>
   <body>
       <header>
+        <nav>
           <ul>
             <li>
               <img src="http://f.cl.ly/items/171n1S1D1y2m3Y3v3K1N/acme-corp.jpg"
@@ -32,12 +46,13 @@
               height=55px>
             </li>
             <li>
-              <a> Products </a>
+              <a href="x"> Products </a>
             </li>
             <li>
-              <a> Sign Up </a>
+              <a href="x" class="btn"> Sign Up </a>
             </li>
           </ul>
+        </nav>
       </header>
       <main>
         <h1>Welcome to ACME Corp!</h1>
