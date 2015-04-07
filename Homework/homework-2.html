@@ -1,25 +1,49 @@
-!DOCTYPLE HTML
+<!DOCTYPE: html>
 <html>
   <head>
     <title>ACME Corp</title>
     <style>
       header
-        {background-color: #c4c4c4; position: fixed; top: 0; left:0; right: 0; border-radius:1px; border: 1px solid lightgrey; box-shadow: 1px 1px lightgrey;
-        margin: 0 auto;}
+        {
+          background-color: #c4c4c4;
+          position: relative;
+          top: 0;
+          left:0;
+          right: 0;
+          border-radius:1px;
+          border: 1px solid lightgrey; box-shadow: 1px 1px lightgrey;
+          margin: 0 auto;
+          padding: 2;
+        }
         ul
-          {list-style-type:none; margin: 0; padding: 0;}
+          {
+            list-style-type:none;
+            margin: 0;
+            padding: 0;
+            }
           li
-            {display: inline; position: relative; top: 0; padding: 10;}
+            {
+              display: inline;
+              padding: 20;
+              }
             img
-              {position: relative; top: 5; left: 15;}
-            a {
+              {
+                position: relative;
+                top: 5;
+                left: 15;
+                }
+            nav{
+              position: absolute;
+              right: 80;
+              top: 25;
+              }
+              a {
               border-radius: 3px;
+              margin: 5px;
               padding: 5px;
               color:white;
               font-family: arial;
-              text-shadow:0px 1px grey; position: relative;
-              top: -20;
-              left: 700;
+              text-shadow:0px 1px grey;
               font-size: 90%;
               text-decoration: none;
               }
@@ -27,24 +51,44 @@
               background-color: mediumblue;
               }
       body
-        {background-image: url("http://f.cl.ly/items/3G1S012t3J3l3b0h070i/background.png");}
+        {
+          background-image: url("http://f.cl.ly/items/3G1S012t3J3l3b0h070i/background.png");
+          margin: 0;
+          }
       main
-        {position: relative; top: 200;border-radius:10px; background-color: white; font-family: arial; border: 1px solid lightgrey; box-shadow: 1px 1px 1px lightgrey; margin: 0 auto; padding: 15px 35px; max-width: 875px;}
+        {
+          position: relative;
+          top: 200;
+          border-radius:10px;
+          background-color: white;
+          font-family: arial;
+          border: 1px solid lightgrey; box-shadow: 1px 1px 1px lightgrey; margin: 0 auto;
+          padding: 15px 35px;
+          max-width: 875px;
+          }
       footer
-        {position: relative; top: 200; text-align: center;}
+        {
+          position: relative;
+          top: 200;
+          text-align: center;
+          }
       hr
-        {max-width: 945px; background-color: lightgrey; margin: 40px auto;}
+        {
+          max-width: 945px;
+          background-color: lightgrey;
+          margin: 40px auto;
+          }
     </style>
   </head>
   <body>
       <header>
-        <nav>
           <ul>
             <li>
               <img src="http://f.cl.ly/items/171n1S1D1y2m3Y3v3K1N/acme-corp.jpg"
               width=200px
               height=55px>
             </li>
+            <nav>
             <li>
               <a href="x"> Products </a>
             </li>
