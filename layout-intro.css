@@ -1,0 +1,54 @@
+/*CSS Reset*/
+ul{
+  list-style:none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tables */
+td {
+  background: skyblue;
+  padding: 10px;
+}
+/*float*/
+section{
+  overflow: hidden;
+}
+div{
+  float:left;
+  background:skyblue;
+  padding: 10px;
+  }
+
+/*flexbox*/
+ul{
+  display: flex;
+}
+li{
+  background:skyblue;
+  padding: 10px;
+}
+
+/*flexbox even columns*/
+.even-columns li {
+  flex: 1;
+}
+/*you write 1 because every column gets one portion*/
+
+/*flexbox two column*/
+.two-column .sidebar{
+  width: 200px;
+}
+.two-column .main{
+  flex: 1;
+  background: red;
+}
+/*this gets the amount that's left over*/
+/*flexbox 4 column*/
+.four-column .sidebar {
+  flex: 1;
+}
+.four-column .main {
+  flex: 2;
+  background: red;
+}
