@@ -36,7 +36,7 @@ header nav a {
 
 main,
 footer {
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 30px;
 }
@@ -56,6 +56,34 @@ main p {
   margin-bottom: 0;
 }
 
+.products{
+  border-bottom: 1px solid lightgrey;
+  list-style: none;
+  display: flex;
+  list-style: none;
+}
+
+.info {
+flex: 1;
+padding: 0 20px 0 20px
+}
+
+
+.product-pics {
+  border: 1px solid lightgrey;
+  border-radius: 2px;
+  padding: 3px;
+
+}
+
+.add-to-cart {
+  background-color: red;
+  padding: 1px 2px;
+  border: 1px solid grey;
+  text-shadow: 0 1px 0 grey;
+  border-radius: 4px;
+}
+
 footer {
   color: #9A989A;
   font-size: 12px;
@@ -66,7 +94,7 @@ footer {
   text-shadow: 0 1px 0 white;
 }
 
-li:last-child {
+.signup {
       background-color: #2A4CB2;
       padding: 10px 20px;
       border: 1px solid #213A82;
