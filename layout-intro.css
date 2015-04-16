@@ -41,7 +41,7 @@ li{
 }
 .two-column .main{
   flex: 1;
-  background: red;
+  background: yellow;
 }
 /*this gets the amount that's left over*/
 /*flexbox 4 column*/
