@@ -132,6 +132,10 @@ div input {
   width: 100px;
 }
 
+input[type=submit] {
+  width: 60px;
+}
+
 
 footer {
   color: #9A989A;
