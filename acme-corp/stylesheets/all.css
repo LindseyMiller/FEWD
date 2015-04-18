@@ -69,6 +69,8 @@ main p {
   margin-bottom: 20px;
 }
 
+/*CSS for products page*/
+
 .products{
   border-bottom: 1px solid lightgrey;
   padding: 20px;
@@ -100,6 +102,36 @@ button[type=submit] {
   text-shadow: 0 1px 0 grey;
   border-radius: 4px;
 }
+
+/*end CSS for products page*/
+/*CSS for sign up page*/
+
+.sign-up {
+  padding: 0;
+}
+
+.fields{
+  margin: 10px 0;
+  display: flex;
+  justify content: flex-start;
+}
+
+div label {
+  width: 100px;
+}
+
+div input {
+  width: 200px;
+}
+
+.checkbox input {
+  width: 10px;
+}
+
+.agree-to-terms {
+  width: 100px;
+}
+
 
 footer {
   color: #9A989A;

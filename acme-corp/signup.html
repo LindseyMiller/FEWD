@@ -36,37 +36,78 @@
       </nav>
     </header>
     <main>
-      <form action="index.html"     method="post">
+      <h1 class="sign-up">
+        Sign Up
+      </h1>
+
+
+      <form action="index.html"
+            method="post"
+            class="sign-up-form">
 
         <div class="fields">
           <label>
-          First Name</label>
-        <input
-        type="text"
-        name="name"  placeholder="first">
-      </div>
+            First Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            placeholder="first">
+        </div>
 
-      <div class="fields">
-        <label>
-          Last Name</label>
-        <input
-        type="text" name="name" placeholder="last">
-      </div>
+        <div class="fields">
+          <label>
+            Last Name
+          </label>
+          <input
+            type="text"
+            name="name"
+            placeholder="last">
+        </div>
 
-      <div class="fields">
-        <label for"ename">
-          E-mail</label>
-        <input
-        id="ename"
-        type="email"
-        name="email" placeholder="e-mail"
-        required>
-      </div>
+        <div class="fields">
+          <label for"ename">
+            E-mail
+          </label>
+          <input
+            id="ename"
+            type="text"
+            name="email"
+            placeholder="e-mail"
+            required>
+        </div>
 
-      <div class="fields">
-        <input type="submit" name="submit"
-        value="Submit"
-      </form>
+        <div class="fields">
+          <label>
+            Password
+          </label>
+          <input
+            type="text"
+            name="password"
+            maxlength="5"
+            required>
+        </div>
+
+        <div class="checkbox">
+          <input
+            type="checkbox"
+            name="checkbox"
+            required>
+            <label class="agree-to-terms">
+              Agree to our terms of service
+            </label>
+        </div>
+    </form>
+
+    <div class="fields">
+      <input
+        type="submit"
+        name="submit"
+        value="Submit">
+    </div>
+
     </main>
+
     <footer>
+      Copyright, 2015
     </footer>
