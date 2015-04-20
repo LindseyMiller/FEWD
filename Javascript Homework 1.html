@@ -1,0 +1,50 @@
+<script>
+// (1)
+function longestSide(a,b,c){
+  a=parseFloat(a);
+  b=parseFloat(b);
+  c=parseFloat(c);
+  var result= Math.sqrt((a * a) + (b * b));
+  return result;
+}
+
+var userA = prompt("What is a?");
+var userB = prompt("What is b?");
+var sum = longestSide(userA, userB);
+alert(sum) + "What is c?";
+
+
+// (2)
+function circumference(r) {
+  r=parseFloat(r);
+  var result= 2 * Math.PI * r;
+  return result;
+}
+
+var userR = prompt("What is the radius?");
+var sum = circumference(userR);
+alert(sum);
+
+
+// (3)
+function celciusF(f){
+  f=parseFloat(f);
+  var result=(f-32) * 5/9;
+  return result;
+}
+
+var userF = prompt("What's the temp outside in Farenheit?");
+var sum = celciusF(userF);
+alert(sum);
+
+// (4)
+function heightInch(i){
+  i=parseFloat(i);
+  var result=(i * 2.54);
+  return result;
+}
+
+var userI = prompt("How tall are you in inches?");
+var sum = heightInch(userI);
+alert(sum);
+</script>
