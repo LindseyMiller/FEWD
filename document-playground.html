@@ -1,0 +1,49 @@
+<p>
+  Hello world!
+</p>
+
+<ul>
+
+</ul>
+
+<script>
+
+// access the paragraph
+//set the paragraph's text content - with an =
+
+var paragraph = document.querySelector("p");
+//Set the paragraph's text content
+paragraph.textContent = "Goodbye world!";
+
+var list = document.querySelector("ul");
+var listItem = document.createElement("li")
+listItem.textContent="First Item"
+list.appendChild(listItem)
+// document.createElement = creates list item
+// returns a new element given a tag name
+var newListItem = document.createElement("li");
+newListItem.textContent="Second Item!";
+list.appendChild(newListItem);
+
+var imageItem = document.createElement("img");
+imageItem.setAttribute("src","http://www.aidells.com/sites/default/files/AID_12oz_AN_CA-DL-FC103520-90.jpg?1370456015");
+list.appendChild(imageItem);
+
+var link =document.createElement("a");
+link.textContent="Search Google";
+link.setAttribute("href", "https://www.google.com/");
+link.setAttribute("target", "_blank");
+link.setAttribute("title", "google");
+list.appendChild(link);
+
+var linkItem = document.createElement("li");
+linkItem.appendChild(link);
+list.appendChild(linkItem);
+
+
+
+// elem.appendChild( ) adds the given element to the page as a child of the element it is called on
+// parent.appendChild(child)
+
+
+</script>

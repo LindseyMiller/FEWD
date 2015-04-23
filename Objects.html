@@ -1,0 +1,25 @@
+<script>
+
+// this is an object:
+var myPerson = {
+  firstName: null,
+  lastName: null
+};
+
+// myPerson is a method? I think?
+
+myPerson.getFullName = function() {
+  return this.firstName + " " + this.lastName;
+}
+
+// this. in first person
+
+myPerson.sayMyName = function() {
+  return alert(this.getFullName())
+}
+
+myPerson.firstName = prompt("What is your fist name?");
+myPerson.lastName = prompt("What is your last name?");
+
+myPerson.sayMyName();
+</script>
