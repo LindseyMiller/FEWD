@@ -28,7 +28,7 @@
 <p>
   There's a function <code>addTwoNumbers()</code> being called. It will be called
   with two arguments. Your job is to make it add the two arguments together. It
-  should also work if you pass in to numbers as strings (e.g. "2" + "2" = 4).
+  should also work if you pass in two numbers as strings (e.g. "2" + "2" = 4).
 </p>
 
 <code>
@@ -62,15 +62,26 @@
 // Define your functions here.
 
 function returnANumber() {
+  var n = prompt("Enter a number");
+  var result = parseInt(n);
+  return result;
 
 }
 
-function addTwoNumbers() {
+function addTwoNumbers(a, b) {
+  var a = parseInt(a);
+  var b = parseInt(b);
+  var result = a + b;
+  return result;
 
 }
 
-function createImage() {
-
+function createImage(source, width, height) {
+  var newImage = document.createElement("img");
+    newImage.setAttribute("src", source);
+    newImage.setAttribute("width", width);
+    newImage.setAttribute("height", height);
+  return newImage;
 }
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE!

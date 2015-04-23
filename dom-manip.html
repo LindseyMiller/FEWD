@@ -2,9 +2,10 @@
 body { font-family: sans-serif; }
 .set { border: 1px solid #ccc; padding: 0 2em; border-radius: 5px; margin-bottom: 2em; }
 #image { border: 5px dotted #ccc; border-radius: 10px; padding: 10px; margin-bottom: 1em; }
+.bold {font-weight: bold;}
 </style>
 
-<div class="set">
+<div>
   <h1>Set 1</h1>
 
   <p>
@@ -15,6 +16,7 @@ body { font-family: sans-serif; }
     <li>First todo item...</li>
   </ul>
 </div>
+
 
 <div class="set">
   <h1>Set 2</h1>
@@ -36,3 +38,63 @@ body { font-family: sans-serif; }
     set up in the CSS. Add that class to this paragraph. Yep, this one right here.
   </p>
 </div>
+
+<script>
+
+// set 1
+  function toDoList(toDoOne) {
+    var fullList=document.querySelector("#todo-list");
+    var toDos=document.createElement("li");
+    toDos.textContent= toDoOne;
+    fullList.appendChild(toDos);
+  }
+
+  var toDoOne = prompt("What do you need to do?");
+  toDoList(toDoOne);
+  toDoOne = prompt("What do you need to do?");
+  toDoList(toDoOne);
+  toDoOne = prompt("What do you need to do?");
+  toDoList(toDoOne);
+
+  // in class:
+  // function newItem(){
+  //   var todo1 = prompt("What do you need to do?");
+  //   var li1 = document.createElement("li");
+  //   li1.textContent = todo1;
+  //   list.appendChild(li1);
+  // }
+  //
+  // newItem();
+  // newItem();
+  // newItem();
+  //
+
+  // set 2
+  function createImage(source, width, height) {
+    var newImage = document.createElement("img");
+      newImage.setAttribute("src", source);
+      newImage.setAttribute("width", width);
+      newImage.setAttribute("height", height);
+    return newImage;
+  }
+
+  var picture = createImage("https://pbs.twimg.com/profile_images/447374371917922304/P4BzupWu.jpeg", 300, 200);
+  var box = document.querySelector("#image");
+  box.appendChild(picture);
+
+// set 3
+
+var paragraph = document.querySelector("#make-me-bold");
+paragraph.setAttribute("class", "bold");
+
+
+
+
+
+
+
+
+
+
+
+</script>
