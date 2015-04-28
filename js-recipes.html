@@ -1,0 +1,54 @@
+1. Add an element to the page
+  a) Does the element have content?
+  b) Are there attributes that need to be set?
+  c) Where does it go?
+  d) What kind of element? (p, ul, li, etc.)
+
+2. Add behavior to an element
+  a) What element?
+  b) What function?
+
+3. Changing something about an existing element
+  a) Which element?
+  b) What are you changing?s
+
+4. Go get data from a server
+ - ajax (?)
+5. Given a set of things, do something to each of them
+  - loops (?)
+
+<script>
+
+// Adding  an element to the page
+// 1. create the element
+var child = document.createElement("li");
+// 2. add it to the Dom - appendChild
+var parent = document.querySelector("ul");
+parent.appendChild(child);
+// 3. Setting the content
+child.textContent = "Do my homework!";
+// 4. Setting some attribute
+child.setAttribute("class", "to-do-item");
+
+
+// Add behavior to an element
+// 1. Which element do you want to attach behavior to?
+var button = document.querySelector("button#click-me");
+// 2. what happend when the event occurs (event handler)?
+function sayCursorLocation(clickEvent){
+  // THis is just an example, you can do whatever you'd like.
+  var x = clickEvent.clientX;
+  var y = clickEvent.clientY;
+  alert("Your mouse is at: " + x + " " + y);
+}
+// 3. Attaching the event handler to the element
+button.addEventListener("click", sayCursorLocation);
+
+// Manipulate an existing element
+//1. get the element you want to change
+var element = document.querySelector("img#logo");
+var paragraph = document.querySelector()
+// 2. Change an attribute
+element.setAttribute("src", "http://example.com");
+
+</script>
