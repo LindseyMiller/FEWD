@@ -1,5 +1,6 @@
 <form id= "new-todo-item-form">
-  <input type = "text" id ="new-todo-item-input" placeholder = "What do you need to do?">
+  <input type = "text" id ="new-todo-item-input"
+          placeholder = "What do you need to do?">
   <button type = "submit"> Create todo</button>
 </form>
 
@@ -7,6 +8,10 @@
 </ul>
 
 <script>
+
+var new-todo-item-form = document.querySelector("ul");
+var new-todo-item-input = document.createElement("li");
+
 // When the form is submitted:
 //    Grab the input from the text input
 //    Add an element (li) to the list (ul)

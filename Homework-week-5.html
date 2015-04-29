@@ -40,5 +40,32 @@ button { background-color: #58c0f5; color: white; border-radius: 3px; }
 </table>
 
 <script>
-  // Your code goes here
+  var boxOne = document.querySelector("#first-operand");
+  var boxTwo = document.querySelector("#second-operand");
+  var result = document.querySelector("#result");
+
+  var addButton = document.querySelector("#add-button");
+  function addNumbers(clickEvent) {
+    result.textContent = parseInt(boxOne.textContent) + parseInt(boxTwo.textContent);
+  }
+  addButton.addEventListener("click", addNumbers);
+
+  var subtractButton = document.querySelector("#subtract-button");
+  function subtractNumbers(clickEvent) {
+    result.textContent = parseInt(boxOne.textContent) - parseInt(boxTwo.textContent);
+  }
+  subtractButton.addEventListener("click", subtractNumbers);
+
+  var multiplyButton = document.querySelector("#multiply-button");
+  function multiplyNumbers(clickEvent) {
+    result.textContent = parseInt(boxOne.textContent) * parseInt(boxTwo.textContent);
+  }
+  multiplyButton.addEventListener("click", multiplyNumbers);
+
+  var divideButton = document.querySelector("#divide-button");
+  function divideNumbers(clickEvent) {
+    result.textContent = parseInt(boxOne.textContent) / parseInt(boxTwo.textContent);
+  }
+  divideButton.addEventListener("click", divideNumbers);
+
 </script>
