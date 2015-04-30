@@ -1,16 +1,47 @@
-<form id= "new-todo-item-form">
-  <input type = "text" id ="new-todo-item-input"
-          placeholder = "What do you need to do?">
-  <button type = "submit"> Create todo</button>
-</form>
+<html>
+  <body>
+    <header>
+      <form id="new-todo-form">
+        <input  type = "text"
+                class ="new-todo-input"
+                placeholder = "What do you need to do?">
+        <button type = "submit"> Create todo </button>
+      </form>
+      <hr>
+    </header>
 
-<ul id ="todo-list">
-</ul>
+          <ul id ="todo-items">
+  <!-- <li class = "todo-item">
+  </li> -->
+          </ul>
 
 <script>
 
-var new-todo-item-form = document.querySelector("ul");
-var new-todo-item-input = document.createElement("li");
+var newTodoForm = document.querySelector("#new-todo-form");
+var newTodoInput = document.querySelector(".new-todo-input");
+var list = document.querySelector("#todo-items");
+
+function createTodoItem (text){
+  var itemOne = document.createElement("li");
+  itemOne.textContent = text;
+  itemOne.setAttribute ("class", "todo-item");
+  return itemOne;
+}
+
+function formSubmitted (event) {
+  event.preventDefault();
+  list.appendChild(createTodoItem(newTodoInput.value));
+  newTodoForm.reset();
+}
+newTodoForm.addEventListener ("submit", formSubmitted);
+newTodoInput.focus();
+
+// var new-todo-input = document.createElement("");
+
+// function NewTodoInput(clickEvent) {
+//   result = textContent.new-todo-input;
+// }
+
 
 // When the form is submitted:
 //    Grab the input from the text input
@@ -22,4 +53,6 @@ var new-todo-item-input = document.createElement("li");
 // Reset the form back to initial state (empty the input)
 // When the page loads:
 //    Add an event listener to the form submit
-</script>
+  </script>
+</body>
+</html>
