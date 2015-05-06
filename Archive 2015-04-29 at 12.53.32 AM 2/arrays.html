@@ -16,4 +16,33 @@
 
 <script>
 // Copy the values from the first list into the second list but sort them!
+// Get the value of each item (5x document.querySelector(#item-n).value)
+// push each value into an array
+//sort the array
+//set the text content for the ordered items (5x document.querySelector(#item-a).textContent)
+
+var item1= document.querySelector("#item-1").value;
+var item2= document.querySelector("#item-2").value;
+var item3= document.querySelector("#item-3").value;
+var item4= document.querySelector("#item-4").value;
+var item5= document.querySelector("#item-5").value;
+
+var fruits = [ ];
+fruits.push(item1);
+fruits.push(item2);
+fruits.push(item3);
+fruits.push(item4);
+fruits.push(item5);
+
+fruits.sort();
+
+document.querySelector("#item-a").textContent = fruits [0];
+document.querySelector("#item-b").textContent = fruits [1];
+document.querySelector("#item-c").textContent = fruits [2];
+document.querySelector("#item-d").textContent = fruits [3];
+document.querySelector("#item-e").textContent = fruits [4];
+
+
+
+
 </script>
