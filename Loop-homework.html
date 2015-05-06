@@ -33,48 +33,37 @@ var favoriteMovies = [
 ]
 
 
-
-// for (var i=0; i<favoriteMovies.length; i=i+1;) {
-// var movieName = favoriteMovies[i];
-// movieName = document.createElement("a");
-// movieName.setAttribute("href", favoriteMovies[i].url);
-// movieName.textContent=favoriteMovies[i].name;
-// var info = document.createElement("span");
-// info.textContent=favoriteMovies.[i].year;
-// var item = document.createElement("li");
-// movieList.appendChild(movie);
-// movieList.appendChild(info);
-//
-//   }
-
 for (var i=0; i<favoriteMovies.length; i=i+1){
-var movieName = favoriteMovies[i];
-// make two variables for movieName
-movieName = document.createElement("a");
-movieName.setAttribute("href", favoriteMovies[i].url);
-movieName.textContent = favoriteMovies[i].name;
-var info = document.createElement("span");
-info.textContent=favoriteMovies[i].year;
-var item = document.createElement("li");
-var movieList = document.querySelector(".movie-list");
-movieList.appendChild(item);
-item.appendChild(movieName);
-item.appendChild(info);
-}
-//
-// var totalRating = 0
-// for (var j = 0; j<mo.length; j++){
-//   totalRating + = moveie.ratings[j];
-// }
 
-//function getAverage(numbers) {
-// var sum= 0;
-// for (var j=0; j<numbers.length; j++){
-// sum = sum + numbers[j];
-//}
-//var average = Math.round((sum / numbers.length) * 10)/10;
-//return average;
-// }
+var line = document.createElement("li");
+var movieList = document.querySelector(".movie-list");
+movieList.appendChild(line);
+
+var movie = favoriteMovies[i];
+var movieName = document.createElement("a");
+movieName.setAttribute("href", movie.url);
+movieName.textContent = movie.name;
+
+var ratingsLength = movie.ratings.length;
+var ratings = movie.ratings;
+var sumRatings = 0
+for (var j = 0; j < ratingsLength; j++) {
+  sumRatings = (sumRatings + ratings[j]);
+}
+
+var numberOfRatings = 0
+for (var k = 0; k < ratingsLength; k++) {
+  numberOfRatings = numberOfRatings + 1;
+}
+var avgRating = Math.round(sumRatings/numberOfRatings * 10) / 10
+
+var info = document.createElement("span");
+info.textContent= " " + "(" + movie.year + ", " + avgRating + " Stars, " + numberOfRatings +" Ratings" + ")";
+
+line.appendChild(movieName);
+line.appendChild(info);
+}
+
 
 
 
