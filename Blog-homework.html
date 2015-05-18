@@ -107,22 +107,24 @@
     <script>
 
       var likeCount = parseInt($("span.like-count").text());
+      var userName;
 
+      function verify(){
+        userName = prompt("Please enter your name");
+        return userName != null && userName.length>0;
+      }
       $("div.like").click(function addLike(click){
           event.preventDefault();
-          // var username = prompt("Please enter your name");
-          // if(username ="" || =null){};
-          // else{
+          verify();
           var newLike = parseInt(likeCount + 1);
           $("span.like-count").text(newLike);
           likeCount = newLike;
-        // }
-
       })
 
       $(":button").click(function addComment(submit){
         event.preventDefault();
-        $("<div>").text($("textarea").val())
+        verify();
+        $("<div>").text($("textarea").val() + " - " + userName)
         .addClass("comment")
         .appendTo("#comments");
         $("textarea").val("");
