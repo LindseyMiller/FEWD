@@ -105,21 +105,31 @@
     </main>
 
     <script>
-      var username;
-      var likeCount = $(".like-count");
-      function verify(){
-        if (username == "null" || "" ||"undefined"){
-          alert="Please Enter Username";
-          }
-          return username;}
-      function addLike(e){
-          for (var i = 0; i < likeCount.length; i++) {
-            likeCount = parseInt(likeCount[i])+1;
-          }
-          verify(username);
-          return likeCount;
-      }
-      $(".like").on("click", addLike);
+
+      var likeCount = parseInt($("span.like-count").text());
+
+      $("div.like").click(function addLike(click){
+          event.preventDefault();
+          // var username = prompt("Please enter your name");
+          // if(username ="" || =null){};
+          // else{
+          var newLike = parseInt(likeCount + 1);
+          $("span.like-count").text(newLike);
+          likeCount = newLike;
+        // }
+
+      })
+
+      $(":button").click(function addComment(submit){
+        event.preventDefault();
+        $("<div>").text($("textarea").val())
+        .addClass("comment")
+        .appendTo("#comments");
+        $("textarea").val("");
+      })
+
+
+
 
 
     </script>
