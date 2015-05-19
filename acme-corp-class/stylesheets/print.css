@@ -1,0 +1,16 @@
+header,
+footer{
+  display: none;
+}
+
+main{
+  box-shadow: none;
+  border: none;
+  padding: 0;
+
+}
+
+/*to create a class and add it to elements on the page*/
+/*.dont-print{
+  display: none;
+}*/

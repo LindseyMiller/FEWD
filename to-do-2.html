@@ -21,8 +21,20 @@ var newTodoForm = document.querySelector("#new-todo-form");
 var newTodoInput = document.querySelector(".new-todo-input");
 var list = document.querySelector("#todo-items");
 
+function saveToDo(text){
+  var currentToDos = JSON.parse(localStorage.getItem("todos"));
+
+  if (currentToDos==null) {
+    currentToDos =[];
+  }
+
+  currentToDos.push(text);
+  localStorage.setItem("todos", JSON.stringify(currentToDos));
+};
+
 function createTodoItem (text){
   var itemOne = document.createElement("li");
+  saveToDo(newTodoInput.value);
   itemOne.textContent = text;
   itemOne.setAttribute ("class", "todo-item");
   return itemOne;
@@ -35,6 +47,14 @@ function formSubmitted (event) {
 }
 newTodoForm.addEventListener ("submit", formSubmitted);
 newTodoInput.focus();
+
+var existingTodos = JSON.parse(localStorage.getItem("todos"));
+
+for (var i = 0; i < existingTodos.length; i++) {
+  var newListItem = document.createElement("li");
+  newListItem.textContent = existingTodos[i];
+  list.appendChild(newListItem);
+}
 
 // var new-todo-input = document.createElement("");
 
