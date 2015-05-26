@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <title>
+    </title>
+
+  </head>
+  <body>
+    <div id="map" >
+
+    </div>
+  </body>
+</html>
+<style media="screen">
+  #map{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+
+  }
+</style>
+<script >
+  L.map("map",{
+    center:[0,0],
+    zoom: 0
+  })
+
+  L.tileLayer(url="
+    https://{s}.tiles.mapbox.com/v4/lindseymiller.m83l99p6/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibGluZHNleW1pbGxlciIsImEiOiJiU2VqWnlVIn0.4RcyjhIfSHuvYxIedKOpbw",
+  })
+</script>
