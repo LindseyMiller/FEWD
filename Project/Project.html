@@ -5,13 +5,62 @@
     <title> I Dare You
     </title>
   <link rel="stylesheet" type ="text/css" href="projectCSS.css" media="(max-width: 600px)">
+  <link rel="stylesheet" type ="text/css" href="screenCSS.css" media="screen">
 
+  </head>
   <body>
     <h1>I dare you...</h1>
     <div class="page">
-      Dare 1
+
+      <div class="dare">
+        Dare goes here
+      </div>
+
+      <div class="buttons-div">
+      <button type="button" name="button" class="skip-button, buttons">skip</button>
+      <button type="button" name="button" class="dare-complete-button, buttons">dare complete</button>
     </div>
+
+    <div class="point-count">
+      Points:
+      <span class = "points">0</span>
+    </div>
+    </div>
+
     <footer> a game by Lindsey Miller
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+
+  var points = parseInt($("span.points").text());
+
+  $(".dare-complete-button").click(function addPoints(click){
+      event.preventDefault();
+      var newPoint = parseInt(points) + 10;
+      $("span.points").text(newPoint);
+      points = newPoint;
+  })
+
+  var dare = $(".dare").text;
+  var dareList = [
+    "Order your drink with an accent",
+    "Lay on the ground for 20 seconds",
+    "Dance with a stranger for 2 choruses of a song",
+    "Get someone to buy you a drink",
+    "Play the same song 6 times in a row",
+    "Send your drink back 3 times",
+    "Ask the bartender for 6 maraschino cherries",
+    "Accidentally take someone's seat when they get up to use the restroom",
+    "Go stand in a random group and be silent for 2 minutes",
+    "End your next 5 sentences with AM I RIGHT",
+  ];
+
+  $(".buttons").click(function nextDare(click){
+    event.preventDefault();
+    var
+  })
+
+  </script>
   </body>
 </html>
