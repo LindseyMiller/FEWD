@@ -9,36 +9,45 @@
 
   </head>
   <body>
-    <form class="yelp-search" action="index.html" method="post">
-      <input class = "name" type="text" placeholder="Bar Name">
-      <input class = "city" type="text" placeholder="City">
-      <button>search</button>
+    <h1> Ready? </h1>
+    <div class="page">
+
+
+    <form class="yelp-search" method="post">
+      <input class = "name" type="text" placeholder="Enter Bar Name">
+      <input class = "city" type="text" placeholder="Enter City">
+      <button class= "search">search</button>
 
     </form>
-
+  </div>
+    <footer> <a href= "Project.html" class="home-button">PLAY</a>
+      a game by Lindsey Miller
+      </footer>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
   </script>
   <script>
   var auth = {
-   //
-   // Update with your auth tokens.
-   //
    consumerKey: "WagKbHceWCaAUXbBmb_GnA",
    consumerSecret: "Vz2bgMsst3VERa2RTRhGLLjFEQY",
    accessToken: "Kb7MabhIAcuUnht042PHKur_tPEwRdWA",
-   // This example is a proof of concept, for how to use the Yelp v2 API with javascript.
-   // You wouldn't actually want to expose your access token secret like this in a real application.
    accessTokenSecret: "NQTSsTjnGGyWY2VEHVdd9NmvrOo",
    serviceProvider: {
      signatureMethod: "HMAC-SHA1"
    }
  };
 
- var terms = 'food';
- var near = 'San+Francisco';
+ $(".search").click(function returnNameCity(click){
+   event.preventDefault();
+   return $(".name").val;
+   return $(".city").val;
+ })
 
- var near=prompt("Please enter the city","San+Francisco");
+ var terms = $(".name").val;
+ var near = $(".city").val;
+
+
+ var near=(terms, near);
 
  var accessor = {
    consumerSecret: auth.consumerSecret,
@@ -59,6 +68,16 @@
    'method': 'GET',
    'parameters': parameters
  };
-  $.get("/v2/search/?term="+ (".name").val + "&location=" + (".city").val + ", CA")
-  </script>
+
+ $.get({
+ 'url': message.action,
+ 'data': parameterMap,
+ 'cache': true,
+ 'dataType': 'jsonp',
+ 'jsonpCallback': 'cb',
+ 'success': function(data, textStats, XMLHttpRequest) {
+   console.log(data);}
+
+
+
 </html>
