@@ -9,5 +9,56 @@
 
   </head>
   <body>
+    <form class="yelp-search" action="index.html" method="post">
+      <input class = "name" type="text" placeholder="Bar Name">
+      <input class = "city" type="text" placeholder="City">
+      <button>search</button>
+
+    </form>
 
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+  </script>
+  <script>
+  var auth = {
+   //
+   // Update with your auth tokens.
+   //
+   consumerKey: "WagKbHceWCaAUXbBmb_GnA",
+   consumerSecret: "Vz2bgMsst3VERa2RTRhGLLjFEQY",
+   accessToken: "Kb7MabhIAcuUnht042PHKur_tPEwRdWA",
+   // This example is a proof of concept, for how to use the Yelp v2 API with javascript.
+   // You wouldn't actually want to expose your access token secret like this in a real application.
+   accessTokenSecret: "NQTSsTjnGGyWY2VEHVdd9NmvrOo",
+   serviceProvider: {
+     signatureMethod: "HMAC-SHA1"
+   }
+ };
+
+ var terms = 'food';
+ var near = 'San+Francisco';
+
+ var near=prompt("Please enter the city","San+Francisco");
+
+ var accessor = {
+   consumerSecret: auth.consumerSecret,
+   tokenSecret: auth.accessTokenSecret
+ };
+
+ parameters = [];
+ parameters.push(['term', terms]);
+ parameters.push(['location', near]);
+ parameters.push(['callback', 'cb']);
+ parameters.push(['oauth_consumer_key', auth.consumerKey]);
+ parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
+ parameters.push(['oauth_token', auth.accessToken]);
+ parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
+
+ var message = {
+   'action': 'http://api.yelp.com/v2/search',
+   'method': 'GET',
+   'parameters': parameters
+ };
+  $.get("/v2/search/?term="+ (".name").val + "&location=" + (".city").val + ", CA")
+  </script>
+</html>

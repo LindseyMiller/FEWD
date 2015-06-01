@@ -9,15 +9,15 @@
   </head>
 
   <body>
-    <h1>I dare you...</h1>
+    <h1>I dare you to...</h1>
     <div class="page">
 
       <div class="dare">
-        Dare goes here
+
       </div>
 
       <div class="buttons-div">
-        <button type="button" name="button" class="skip-button, buttons">skip</button>
+        <button type="button" name="button" class="skip-button">skip</button>
         <button type="button" name="button" class="dare-complete-button">dare complete</button>
       </div>
 
@@ -43,6 +43,34 @@
      $("span.points").text(newPoint);
      points = newPoint;
  })
+
+var dareText = $(".dare");
+
+var dareList = [
+  "order your next drink with an accent",
+  "lay on the ground for 20 seconds",
+  "dance with a stranger for 2 choruses of a song",
+  "get a stranger to buy you a drink",
+  "play the same song 6 times in a row",
+  "send your drink back 3 times",
+  "ask the bartender for 6 maraschino cherries",
+  "accidentally take someone's seat when they get up to use the restroom",
+  "go stand in a random group and be silent for 2 minutes",
+  "end your next 5 sentences with AM I RIGHT",
+];
+
+var currentDare = dareText.text(dareList[0]);
+
+function nextDare(click){
+    var currentDarePos = dareList.indexOf(currentDare);
+    var next = dareList[currentDarePos + 1];
+    currentDare=next;
+    dareText.text(currentDare);
+  };
+
+$(".dare-complete-button").on("click", nextDare);
+$(".skip-button").on("click", nextDare);
+
 
   </script>
 
