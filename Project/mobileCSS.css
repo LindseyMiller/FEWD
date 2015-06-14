@@ -27,24 +27,55 @@ h1{
   margin-left: 0px;
   padding-top: 100px;
   padding-bottom: 100px;
+  text-align: center;
+}
 
+.dare-container {
+  display: flex;
+}
+.dare {
+  flex: 1;
+}
+
+.buttons-div {
+  display: flex;
 }
 
 .skip-button {
   margin: 30px 10px;
   padding: 10px;
   font-size: .5em;
+  flex: 1;
 }
 
 .dare-complete-button{
   margin: 30px 10px;
   padding: 10px;
   font-size: .5em;
+  flex: 1;
 }
 
 .point-count {
   font-size: 1em;
   font-color: LightSlateGray;
+}
+
+.user {
+  display: flex;
+}
+
+.user-dare {
+  flex: 3;
+  margin: 30px 10px;
+  padding: 10px;
+  font-size: .5em;
+}
+
+.add-dare {
+  flex: 1;
+  margin: 30px 10px;
+  padding: 10px;
+  font-size: .5em;
 }
 
 footer{
