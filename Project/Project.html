@@ -4,17 +4,18 @@
   <head>
     <title> I Dare You
     </title>
-  <link rel="stylesheet" type ="text/css" href="projectCSS.css" media="screen">
+  <link rel="stylesheet" type ="text/css" href="mobileCSS.css" media="screen">
 
   </head>
 
   <body>
     <h1>I dare you to...</h1>
     <div class="page">
+      <div class="dare-container">
+        <div class="dare">
 
-      <div class="dare">
-
-      </div>
+        </div>
+    </div>
 
       <div class="buttons-div">
         <button type="button" name="button" class="skip-button">skip</button>
@@ -29,10 +30,15 @@
       High Score:
       <span class="high">10</span>
     </div>
+    <form class="user" method="submit">
+      <input class="user-dare" type="text" placeholder="add your own dare">
+      <button type="button" class="add-dare" name="button"> add </button>
+    </form>
   </div>
 
+
     <footer> a game by Lindsey Miller
-      <a href= "Project-start.html" class="home-button">Go Home</a>
+
     </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
@@ -48,7 +54,9 @@
      points = newPoint;
  })
 
-var dareText = $(".dare");
+ var dareText = $(".dare");
+
+
 
 var dareList = [
   "order your next drink with an accent",
@@ -64,6 +72,7 @@ var dareList = [
   "find someone wearing a tie"
 ];
 
+
 var currentDare = dareText.text(dareList[0]);
 
 function nextDare(click){
@@ -75,6 +84,16 @@ function nextDare(click){
 
 $(".dare-complete-button").on("click", nextDare);
 $(".skip-button").on("click", nextDare);
+
+// var newDares = document.querySelectorAll(".user-dare");
+// function addDare(){
+//   for (var i = 0; i < newDares.length; i++) {
+//   var newDare = newDares[i];
+//   dareList.push(newDare.value);
+// };
+//
+// $(".user").on("submit", addDare);
+
 
 
   </script>
