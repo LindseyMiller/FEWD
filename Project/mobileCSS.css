@@ -38,6 +38,7 @@ h1{
 .dare {
   flex: 1;
   font-size: 2em;
+  font-weight: 600;
 }
 
 .buttons-div {
