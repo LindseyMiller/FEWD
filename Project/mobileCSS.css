@@ -7,12 +7,14 @@ html {
 
 body {
   margin: 0;
-  color: white;
+  color: rgb(88, 88, 88);
 }
 
 h1{
   margin-left: 20px;
   text-shadow: 0 1px black;
+  color: white;
+  font-size: 2.5em;
 }
 
 
@@ -45,20 +47,23 @@ h1{
 .skip-button {
   margin: 30px 10px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
   flex: 1;
 }
 
 .dare-complete-button{
   margin: 30px 10px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
   flex: 1;
 }
 
 .point-count {
   font-size: 2em;
-  font-color: LightSlateGray;
+}
+
+.high-score {
+  font-size: 2em;
 }
 
 .user {
@@ -69,19 +74,20 @@ h1{
   flex: 3;
   margin: 30px 10px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .add-dare {
   flex: 1;
   margin: 30px 10px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 footer{
   margin: 10px;
   font-family: monospace;
-  font-size:0.8em;
+  font-size: 1em;
   text-align: center;
+  color: white;
 }
